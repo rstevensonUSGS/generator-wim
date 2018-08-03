@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="USGS WiM">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="copyright" href="license.txt">
+    <link rel="shortcut icon" id="favicon" type="image/ico" href="images/favicon-dark.png" />
+    <title>WIM Locations</title>
+
+    <script src="scripts/appConfig.js"></script>
+	<script src="scripts/core-lite.js"></script>
+
+    <link rel="stylesheet" href="https://txpub.usgs.gov/DSS/search_api/2.1/api/search_api.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+
+    <!-- USGS Search -->
+    <script type="text/javascript" src="https://txpub.usgs.gov/DSS/search_api/2.1/api/search_api.min.js"></script
+    
+
+    <!-- Start Google Analytics -->
+    <!--
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        /* After creating a property for your account on analytics.google.com, enter the tracking ID where it's stated below*/
+        ga('create', 'UA-ENTERCODE-HERE>', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    -->
+    <!-- End Google Analytics -->
+
+  </head>
+  <body>
+    <div id="top-menu">
+        <div class="title">
+            <a class='top-menu-brand' href="https://www.usgs.gov"><img id="logo" src="images/usgs_logo.png"></a>
+            <span class="app-name">WIM Locations</span> <span class="app-name-mobile">WIM Locations</span> 
+        </div>
+        <div id="mobile-main-menu">
+            <span class="glyphicon glyphicon-menu-hamburger" ></span>
+        </div>
+
+        <button id="geosearchButton" type="button" class="btn btn-default top-menu-btn pull-right" onclick="ga('send','event','navbar','click','Find Location Modal Opened');">
+            <i class="glyphicon glyphicon-search"></i><span class="hidden-xs">&nbsp;&nbsp;Find Location</span>
+        </button>
+        
+        
+
+    </div>
+
+    <div id="main-menu">
+        <div class="main-menu-container scrollable">
+            <div class="menu-content"> 
+                <div class="scrollable-content">
+
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default sidebar-panel wim-sidebar-panel">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#panel1">
+                                        Panel
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="panel1" class="panel-collapse collapse">
+                                <div class="panel-body">     
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default sidebar-panel">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#basemapsPanel">
+                                        Basemaps
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="basemapsPanel" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <button id="btnStreets" class="btn btn-default slick-btn basemapBtn equalize"><img class="basemapThumb" alt="" src="images/streets.jpg"><br class="basemapThumb">Streets</button>
+                                    <button id="btnSatellite" class="btn btn-default slick-btn basemapBtn equalize" ><img class="basemapThumb" alt="" src="images/satellite.jpg"><br class="basemapThumb">Satellite</button>
+                                    <button id="btnTopo" class="btn btn-default slick-btn basemapBtn equalize"><img class="basemapThumb" alt="" src="images/topo.jpg"><br class="basemapThumb">Topo</button>
+                                    <button id="btnTerrain" class="btn btn-default slick-btn basemapBtn equalize"><img class="basemapThumb" alt="" src="images/terrain.jpg"><br class="basemapThumb">Terrain</button>
+                                    <button id="btnGray" class="btn btn-default slick-btn basemapBtn equalize slick-btn-selection" ><img class="basemapThumb" alt="" src="images/gray.jpg"><br class="basemapThumb">Gray</button>
+                                    <button id="btnNatGeo" class="btn btn-default slick-btn basemapBtn equalize"><img class="basemapThumb" alt="" src="images/natgeo.jpg"><br class="basemapThumb">NatGeo</button>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!--map layers panel for esri full -->
+                        
+                        <!-- end map layers panel for esri full -->
+                    </div>
+                    <!-- -->
+                    <div class="footer-links">
+                        <div class="identification"><a href="https://wim.usgs.gov/" target="_blank">Powered by WiM</a></div>
+                            <a href="https://usgs.gov" target="_blank">USGS Home </a>
+                            <a href="https://answers.usgs.gov" target="_blank">Contact USGS </a>
+                            <a href="https://search.usgs.gov" target="_blank">Search USGS </a>
+                            <a href="https://www2.usgs.gov/laws/accessibility.html" target="_blank">Accessibility </a>
+                            <a href="https://www2.usgs.gov/foia/" target="_blank">FOIA </a>
+                            <a href="https://www2.usgs.gov/laws/privacy.html" target="_blank">Privacy </a>
+                            <a href="https://www2.usgs.gov/laws/policies_notices.html" target="_blank">Policies & Notices</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="aboutModal" class="modal fade"  tabindex="-1" role="dialog" >
+        <div class="modal-dialog  modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal" aria-hidden="true" style="color:gray;">&times;</button>
+                    <h4 class="modal-title" id="aboutModalTitle">WIM Locations</h4>
+                </div>
+                <div id="aboutModalBody" class="modal-body">
+                    <ul class="nav nav-tabs" id="aboutModalTabs">
+                        <li role="presentation" class="active"><a id="aboutTab" href="#aboutTabPane" data-toggle="tab" onclick="ga('send','event','About Modal','click','About');"><i class="glyphicon glyphicon-info-sign"></i>&nbsp;About</a></li>
+                        <li role="presentation"><a id="disclaimerTab" href="#disclaimerTabPane" data-toggle="tab" onclick="ga('send','event','About Modal','click','Disclaimer');"><i class="glyphicon glyphicon-exclamation-sign"></i>&nbsp;Disclaimer</a></li>
+                        <li role="presentation"><a id="contactTab" href="#contactTabPane" data-toggle="tab" onclick="ga('send','event','About Modal','click','Contact');"><i class="glyphicon glyphicon-envelope"></i>&nbsp;Contact Us</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="aboutTabPane"></br>
+                            <p>Add some information about this app.</p>
+                            <p>Developed by <a href="https://wim.usgs.gov" target="_blank">Web Informatics and Mapping (WiM)</a></p>
+                            <span id="appVersion"></span>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="disclaimerTabPane">
+                            <h3>Disclaimer</h3>
+                                <p>The use of trade, product, industry or firm names or products is for informative purposes only and does not constitute an endorsement by the U.S. Government...</p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="contactTabPane">
+                            <h3>Contact Us</h3>
+                                <p>Add contact information for cooperator agency.</p>
+                                <p><i class="glyphicon glyphicon-envelope"></i> email:</p>
+                                <p><i class="glyphicon glyphicon-earphone"></i> phone:</p>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="modal-footer">
+                </div>-->
+            </div><!-- /.modal-content -->
+        </div> <!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade overflow-y-hidden" id="geosearchModal" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                        <h4 class="modal-title">Find Location</h4>
+                </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div id="geosearch" align="center"></div>
+                            <br>
+                            <div align="center">
+                                <p>Search provided by <a href="https://txpub.usgs.gov/dss/search_api/2.0/" target="_blank">USGS Search Javascript API</a></p>
+                            </div>
+                            <br>
+                            <div>
+                                <h5 style="text-align: center">Supported search strings include: </h5>
+                                    <p style="text-align: center">Address, States, Zip Codes, Area Codes, Lat/Long (i.e. '43.9,-72.1')</p>
+                            </div>
+                        </div>
+                            <form id="geosearch-form" class="form-inline">
+                                <button id="btnDismiss" type="submit" class="btn btn-default btn-fixed" data-dismiss="modal">Dismiss</button>
+                            </form>
+                    </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+
+
+
+    <div id="mapDiv">
+
+        
+
+    </div>
+
+    
+
+    
+    <div id="latLngScale" class="latLngScale">
+            <span class="hover-content"> <b>Map scale </b></span>
+            1:<span id="scale"></span> | <span class="hover-content"> <b>Zoom level </b></span> <span id="zoomLevel"></span><br>
+            <span class="hover-content"><b>Latitude</b></span>
+            <span id="latitude">y</span> |
+            <span class="hover-content"> <b>Longitude</b></span>
+            <span id="longitude">x</span>
+            <span id="mapCenterLabel"  class="hover-content"> (center)</span>
+    </div>
+    
+  </body>
+</html>

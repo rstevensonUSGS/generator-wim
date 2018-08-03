@@ -1,0 +1,587 @@
+/*
+    ===========================
+    ===========================
+         Navigation Bar
+    ===========================
+    ===========================
+*/
+
+.top-menu-btn{
+    background-color: transparent;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 12pt;
+    margin: 18px auto;
+}
+.top-menu-btn:hover{
+    font-size: 12pt;
+    background-color: transparent;
+    border: none;
+    color: rgba(255,255,255,0.8)
+}
+.top-menu-btn:focus{
+    background-color: transparent;
+    border: none;
+    color: rgba(255,255,255,0.8);
+    font-size: 12pt;
+}
+.top-menu-btn:active{
+    color: rgba(255,255,255,1) !important;
+    background-color: transparent !important;
+    font-size: 12pt;
+    border: none;
+}
+
+.top-menu-brand {
+    padding: 18px 20px 15px;
+}
+
+.top-menu-brand{
+    padding-top: 18px;
+}
+
+.app-name{
+    position: relative;
+    top:-2px;
+    font-weight:300;
+}
+
+.app-name {
+  position: relative;
+  width: 100%;
+  line-height: 70px;
+  padding: 0 10px;
+  font-size: 23px;
+  color: #ffffff;
+  margin: 0;
+  z-index: 10;
+}
+
+.app-name-mobile{
+    position: relative;
+    top:-2px;
+    font-weight:300;
+}
+
+.app-name-mobile {
+  display: none;
+  position: relative;
+  width: 100%;
+  line-height: 70px;
+  padding: 0 10px;
+  font-size: 23px;
+  color: #ffffff;
+  margin: 0;
+  z-index: 10;
+
+}
+
+
+/*
+    ===========================
+    ===========================
+         Map
+    ===========================
+    ===========================
+*/
+html, body, #mapDiv {
+  padding: 0; 
+  margin: 0;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  padding-top: 70px;
+  padding-left:270px;
+}
+
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/OpenSans-Regular.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans'), local('OpenSans'),
+       url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/OpenSans-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/OpenSans-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/OpenSans-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/OpenSans-Regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
+#mapDiv_zoom_slider {
+  top: 80px !important;
+  left: 280px !important;
+}
+
+#homeButton {
+    position: absolute;
+    top: 90px !important;
+    left: 272px !important;
+    z-index: 50 !important;
+}
+
+#locateButton {
+    position: absolute;
+    top: 130px !important;
+    left: 272px !important;
+    z-index: 50 !important;
+}
+
+.legendClass {
+    position:absolute;
+    top:80px !important;
+    right:5px;
+    z-index:3;
+    color: black;
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+    /*min-width: 150px;*/
+    border-radius: 4px;
+}
+
+.legendHeading {
+    color: black;
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255,0.8);
+    text-decoration: none !important;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#homeButton {
+    position: absolute;
+    top: 75px;
+    left: 5px;
+    z-index: 50;
+}
+
+#locateButton {
+    position: absolute;
+    top: 115px;
+    left: 5px;
+    z-index: 50;
+}
+
+.latLngScale {
+    position:absolute;
+    padding:4px;
+    bottom:1.6em;
+    left: 280px !important;
+    /*width:250px*/
+    /*height:320px;*/
+    z-index:1;
+    color: black;
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+    border-radius: 4px;
+}
+
+#logo {
+  height: 55px;
+  width: 160px;
+}
+
+/*
+    ===========================
+    ===========================
+         Top menu
+    ===========================
+    ===========================
+*/
+
+#top-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #1d1d2b;
+  z-index: 9;
+}
+
+#top-menu > div:not(.logo) {
+  float: left;
+}
+
+#top-menu .title {
+  border-right: 1px solid #191924;
+  min-width: 270px;
+  /*cursor: pointer;*/
+}
+
+#mobile-main-menu {
+  display: none;
+  cursor: pointer;
+}
+
+#mobile-main-menu {
+  padding: 24px 15px;
+  color:white;
+}
+
+/************* END TOP MENU **************/
+
+
+
+ /*
+    ===========================
+    ===========================
+         Main Menu
+    ===========================
+    ===========================
+*/
+
+.identification {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 9pt;
+    display: block;
+    padding:8px;
+}
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;         /* adjust as needed */
+    padding-left:8px;
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+    padding-left:8px;
+}
+
+#main-menu {
+  width: 270px;
+  height: calc(100% - 70px);
+  float: left;
+  background-color: #20202f;
+  margin-top: 65px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  transition: left .5s ease;
+}
+
+#main-menu .main-menu-container {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.footer-links {
+  display: block;
+  box-sizing: border-box;
+  padding: 0px 5px 0px 5px;
+  line-height: 1.5em;
+  opacity: .75;
+  text-align: center;
+}
+
+.footer-links a {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0px 4px 0px 4px;
+  font-size: 10pt;
+}
+
+/************* END MAIN MENU **************/
+
+/************** All other stuff *********/
+
+@media (max-width: 1020px) {
+  #top-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    border-bottom: 1px solid #191924;
+  }
+
+  #top-menu #mobile-main-menu {
+    order: 0;
+  }
+
+  #top-menu .title {
+    order: 1;
+    width: calc(100% - 95px);
+    text-align: center;
+    min-width: 1px;
+  }
+
+  #mobile-main-menu {
+    display: inline-block;
+  }
+
+  #main-menu {
+    left: -100%;
+    height: calc(100% - 69px);
+  }
+
+  .isOpenMenu #main-menu {
+    left: 0;
+  }
+
+  body {
+    padding-left:0px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  #main-menu {
+    height: calc(100% - 70px);
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .app-name {
+    display: none;
+  }
+
+  .app-name-mobile {
+    display: inline;
+    font-size:small;
+  }
+
+}
+
+pre {
+  word-wrap: normal;
+  word-break: normal;
+}
+
+/************** All other stuff *********/
+
+#main-menu {
+  background-color: #ECEEF3;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 0 !important;
+}
+@media (max-width: 991px) {
+  #main-menu {
+    background-color: rgba(236, 238, 243, 0.8);
+  }
+}
+
+#main-menu .sidebar-panel {
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  border: none;
+}
+#main-menu .sidebar-panel .panel-heading {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+#main-menu .sidebar-panel .panel-heading h4 {
+  font-size: 10pt;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: right;
+}
+#main-menu .sidebar-panel .panel-heading h4 a {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  color: #6F758E;
+  background-color: #ECEEF3;
+}
+#main-menu .sidebar-panel .panel-heading h4 a:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+}
+#main-menu .sidebar-panel .panel-heading h4 a:hover:after {
+  color: #000;
+}
+#main-menu .sidebar-panel .panel-heading h4 a:active {
+  background-color: rgba(69, 116, 204, 0.2);
+}
+#main-menu .panel-collapse {
+  background-color: #FFFFFF;
+}
+
+#main-menu .slick-btn {
+  border: none;
+  outline: none;
+  border-radius: 0;
+  font-size: 9pt;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  padding: 5px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  color: #6F758E;
+  margin: 0 auto;
+  border-left: 4px solid transparent;
+}
+#main-menu .slick-btn img {
+  height: 25px;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 15px 0 0;
+  border-radius: 0;
+  border: none;
+}
+#main-menu .slick-btn br {
+  display: none;
+}
+#main-menu .slick-btn:hover {
+  border-color: #333;
+  background-color: rgba(236, 238, 243, 0.5);
+}
+#main-menu .slick-btn:focus {
+  background-color: #ECEEF3;
+  border-color: #4574CC;
+}
+
+#main-menu .slick-btn-selection {
+  background-color: rgba(236, 238, 243, 0.5);
+  border-color: #4574CC !important;
+}
+
+/* User Guide */
+
+.user-guide-header{
+    display: block;
+    text-align: center;
+    font-size: 16pt;
+    box-sizing: border-box;
+    padding: 10px 0 25px 0;
+}
+
+.user-guide-item{
+    display: block;
+    box-sizing: border-box;
+    padding: 35px 15px 35px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.user-guide-item:nth-child(even){
+    background-color: rgba(0,0,0,0.04);
+}
+
+.user-guide-item .user-guide-item-image{
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+}
+.user-guide-item img{
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    border: 4px solid rgba(0,0,0,0.15);
+}
+.user-guide-item p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 2;
+    padding-left: 15px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box;
+    font-size: 12pt;
+}
+.user-guide-item p b{
+    color: rgba(0,0,0,0.6);
+    display: block;
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
+
+#closeModalButton{
+  box-sizing: border-box; 
+  padding: 0 25px 35px;  
+}
+
+
+/*Frequently Asked Questions*/
+.faq-modal-body{
+    display: block;
+    box-sizing: border-box;
+    padding: 30px 25px;
+}
+.faq-header{
+    display: block;
+    font-size: 12pt;
+    margin-bottom: 8px;
+    background-color: #F5F5F5;
+    color: #555555;
+    box-sizing: border-box;
+    transition: 0.12s;
+    padding: 10px;
+}
+
+.faq-header i{
+    margin-left: 10px;
+}
+.faq-header:hover{
+    cursor: pointer;
+    color: #6184DB;
+    transition: 0.12s;
+}
+
+.faq-body{
+    display: none;
+    line-height: 1.6em;
+    color: #555555;
+    font-size: 10.35pt;
+    box-sizing: border-box;
+    padding: 10px 10px;
+
+}
+.faq-body img{
+    display: block;
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+
+/* Hiding 'Powered by ESRI' logo */
+.map .logo-med {
+  display: none;
+}
+
+/* Hiding 'Powered by ESRI' logo */
+.map .logo-med {
+  display: none;
+}
+
+
+
+.esri-leaflet-logo leaflet-control {
+    display: none;
+}
+
+/* Styling Home Button */
+.leaflet-control-defaultextent-toggle {
+  text-indent: -9999px;
+  white-space: nowrap;
+  background-image: url('../images/home.png');
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+.leaflet-left {
+  left: 275px;
+  top: 75px;
+}
